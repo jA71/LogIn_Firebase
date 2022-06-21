@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="margins">
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- DESIGN FOR INPUTS -->
+    <style name="inputs" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="android:paddingTop">@dimen/input_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- DESING FOR MSG -->
+    <style name="msg" parent="inputs">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <!-- DESING FOR FRAGMENT -->
+
+    <style name="fragments">
+        <item name="android:layout_marginLeft">@dimen/margin_frag</item>
+        <item name="android:layout_marginTop">@dimen/margin_frag</item>
+        <item name="android:layout_marginRight">@dimen/margin_frag</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!-- DESING FOR BTN -->
+
+    <style name="btn" parent="margins">
+        <item name="cornerRadius">@dimen/btn_radius_cornes</item>
+    </style>
+
+
+
+</resources>
