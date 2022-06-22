@@ -49,12 +49,12 @@ class Register : AppCompatActivity() {
                     if (views.password.text.toString().equals(views.confirmPassword.text.toString())) {
                         showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
                     } else {
-                        Toast.makeText(this, "Error, password does not match", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "!ERROR! Passwords does not match", Toast.LENGTH_SHORT)
                             .show()
                     }
 
                 } else {
-                    Toast.makeText(this, "Error, user already exists", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "!ERROR!, User already exists", Toast.LENGTH_SHORT).show()
                 }
             }
         }
