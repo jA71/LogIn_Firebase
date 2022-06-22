@@ -56,7 +56,7 @@ class AuthActivity : AppCompatActivity() {
             }
         }
 
-        views.registerMsg.setOnClickListener {
+        views.registerBtn.setOnClickListener {
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(views.user.text.toString(), views.password.text.toString()).addOnCompleteListener {
                 if (it.isSuccessful) {
                     showHome(it.result?.user?.email ?: "",  ProviderType.BASIC)
@@ -67,13 +67,6 @@ class AuthActivity : AppCompatActivity() {
             }
         }
 
-        views.googleBtn.setOnClickListener {
-
-            //configuracion
-            //val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id))
-            FirebaseAuth.getInstance().
-
-        }
 
 
     }
