@@ -26,6 +26,8 @@
 
 
     <string name="prefs_file">preferencias</string>
+    <string name="default_web_id_token">165602814967-smk14bfoodpjt9ifo94kie1lgupd0qcm.apps.googleusercontent.com</string>
+
 
 
 </resources>
