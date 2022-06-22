@@ -27,7 +27,7 @@ class Options : AppCompatActivity() {
     }
 
     private fun setup() {
-        /*views.googleBtn.setOnClickListener {
+        views.googleBtn.setOnClickListener {
             val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
 
@@ -36,7 +36,7 @@ class Options : AppCompatActivity() {
 
             startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
 
-        }*/
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -59,13 +59,13 @@ class Options : AppCompatActivity() {
                                 showHome(account.email ?: "", ProviderType.GOOGLE)
 
                             } else {
-                                Toast.makeText(this, "Error al ingresar", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "Error al ingresar 1", Toast.LENGTH_SHORT).show()
                             }
                         }
                 }
 
             }catch (e: ApiException){
-                Toast.makeText(this, "Error al ingresar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error al ingresar 2", Toast.LENGTH_SHORT).show()
             }
 
         }
