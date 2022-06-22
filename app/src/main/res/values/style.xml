@@ -74,5 +74,10 @@
         <item name="android:layout_marginTop">@dimen/margin_top_data</item>
     </style>
 
+    <!--splash screen-->
+    <style name="splashTheme" parent="Theme.LogIn_Firebase">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
 
 </resources>
