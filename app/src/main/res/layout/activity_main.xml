@@ -6,40 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/email"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
-        android:paddingLeft="15dp"
-        android:text="@string/email"
-        android:textColor="@color/red_uide"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/provider"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="15dp"
-        android:text="Proveedor"
-        android:textColor="@color/red_uide"
-        app:layout_constraintLeft_toLeftOf="@id/email"
-        app:layout_constraintRight_toRightOf="@id/email"
-        app:layout_constraintTop_toBottomOf="@id/email" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/logOut_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Cerrar Sesion"
-        android:textAllCaps="false"
-        app:layout_constraintLeft_toLeftOf="@id/email"
-        app:layout_constraintRight_toRightOf="@id/email"
-        app:layout_constraintTop_toBottomOf="@id/provider" />
+            <ImageView
+                android:id="@+id/logo_uide"
+                style="@style/margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/msg_view"
+                style="@style/msg"
+                android:contentDescription="@string/welcome_msg"
+                android:gravity="center"
+                android:text="@string/welcome_msg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_msg"
+                app:layout_constraintEnd_toEndOf="@id/logo_uide"
+                app:layout_constraintTop_toBottomOf="@id/logo_uide" />
+
+            <TextView
+                android:id="@+id/email_text"
+                style="@style/view_text"
+                android:text="@string/email"
+                app:layout_constraintLeft_toLeftOf="@+id/msg_view"
+                app:layout_constraintRight_toRightOf="@+id/msg_view"
+                app:layout_constraintTop_toBottomOf="@+id/msg_view" />
+
+            <TextView
+                android:id="@+id/email"
+                style="@style/text"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/email"
+                app:layout_constraintLeft_toLeftOf="@+id/email_text"
+                app:layout_constraintRight_toRightOf="@+id/email_text"
+                app:layout_constraintTop_toBottomOf="@+id/email_text" />
+
+            <TextView
+                android:id="@+id/provider_text"
+                style="@style/view_text"
+                android:text="@string/provider"
+                app:layout_constraintLeft_toLeftOf="@+id/email"
+                app:layout_constraintRight_toRightOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <TextView
+                android:id="@+id/provider"
+                style="@style/text"
+                android:text="@string/provider"
+                app:layout_constraintEnd_toEndOf="@+id/provider_text"
+                app:layout_constraintStart_toStartOf="@+id/provider_text"
+                app:layout_constraintTop_toBottomOf="@+id/provider_text" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/input_padding"
+                android:contentDescription="@string/login_btn"
+                android:text="@string/logout_btn"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="@id/provider"
+                app:layout_constraintTop_toBottomOf="@+id/provider" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
