@@ -5,21 +5,20 @@
     <string name="msg_login">Log In</string>
     <string name="register">Sign Up</string>
     <string name="new_user">Are you new?</string>
+    <string name="login_whit">Or, login with</string>
+    <string name="signup_whit">Or, signup with</string>
+    <string name="social_media">Social Media</string>
 
 
     <!-- FLIEDS -->
     <string name="email">E-mail</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
 
 
     <!-- BTNS -->
     <string name="login_btn">Login</string>
     <string name="register_btn">Register</string>
-
-
-
-
-
 
 
     <string name="prefs_file">preferencias</string>

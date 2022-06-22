@@ -117,17 +117,17 @@
                 style="@style/read_msg"
                 android:clickable="true"
                 android:gravity="left"
-                android:text="Or, login with"
+                android:text="@string/login_whit"
                 app:layout_constraintStart_toStartOf="@id/register_btn"
                 app:layout_constraintTop_toBottomOf="@+id/register_btn" />
 
             <TextView
                 android:id="@+id/social_media_msg"
                 style="@style/click_msg"
+                android:layout_marginStart="110dp"
                 android:clickable="true"
                 android:gravity="left"
-                android:text="Social Media"
-                android:layout_marginStart="110dp"
+                android:text="@string/social_media"
                 app:layout_constraintStart_toStartOf="@id/register_btn"
                 app:layout_constraintTop_toBottomOf="@+id/register_btn" />
 
