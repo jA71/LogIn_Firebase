@@ -82,7 +82,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="85dp"
+                android:layout_marginEnd="80dp"
                 android:gravity="right"
                 android:text="Are you new?"
                 app:layout_constraintStart_toStartOf="@id/password_field"
