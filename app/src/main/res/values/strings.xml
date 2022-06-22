@@ -13,6 +13,9 @@
 
     <!-- BTNS -->
     <string name="login_btn">Login</string>
+    <string name="register_btn">Register</string>
+
+    <string name="prefs_file">preferencias</string>
 
 
 </resources>
