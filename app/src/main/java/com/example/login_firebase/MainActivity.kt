@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     private fun setup(email: String, provider: String) {
         views.email.text = email
         views.provider.text = provider
-        views.logOutBtn.setOnClickListener {
+        views.logoutBtn.setOnClickListener {
 
             val prefs =
                 getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
