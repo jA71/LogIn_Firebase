@@ -21,6 +21,9 @@
     <dimen name="margin_top_msg">330dp</dimen>
     <dimen name="text_size_msg">30dp</dimen>
     <dimen name="text_size">18dp</dimen>
+    <dimen name="margin_top_click_txt">5dp</dimen>
+    <dimen name="margin_end_read_txt">80dp</dimen>
+
 
     <!-- BTN -->
 

@@ -21,8 +21,6 @@
 
     <!-- DESING FOR MSG -->
     <style name="msg" parent="inputs">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">left</item>
     </style>
 
@@ -42,6 +40,21 @@
         <item name="cornerRadius">@dimen/btn_radius_cornes</item>
     </style>
 
+
+    <!-- DESIGN FOR CLICKABLE MSG -->
+
+    <style name="click_msg" parent="margins">
+        <item name="android:textColor">@color/steel_blue</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_click_txt</item>
+    </style>
+
+
+    <!-- DESIGN FOR MSG -->
+
+    <style name="read_msg" parent="margins">
+        <item name="android:layout_marginTop">@dimen/margin_top_click_txt</item>
+    </style>
 
 
 </resources>

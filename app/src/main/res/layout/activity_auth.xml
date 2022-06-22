@@ -13,6 +13,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
             android:orientation="vertical">
 
             <ImageView
@@ -20,20 +21,18 @@
                 style="@style/margins"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_top_logo"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:id="@+id/msg_view"
                 style="@style/msg"
-                android:layout_marginTop="@dimen/margin_top_msg"
                 android:contentDescription="@string/msg_login"
                 android:text="@string/msg_login"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_msg"
                 app:layout_constraintEnd_toEndOf="@id/logo_uide"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/logo_uide" />
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -78,27 +77,21 @@
 
             <TextView
                 android:id="@+id/forgot_msg"
-                style="@style/margins"
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="80dp"
+                style="@style/read_msg"
+                android:layout_marginEnd="@dimen/margin_end_read_txt"
                 android:gravity="right"
-                android:text="Are you new?"
+                android:text="@string/new_user"
                 app:layout_constraintStart_toStartOf="@id/password_field"
-                app:layout_constraintTop_toBottomOf="@+id/password_field"/>
+                app:layout_constraintTop_toBottomOf="@+id/password_field" />
 
             <TextView
                 android:id="@+id/register_msg"
-                style="@style/margins"
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                style="@style/click_msg"
+                android:clickable="true"
                 android:gravity="right"
                 android:text="@string/register"
-                android:autoLink="web"
                 app:layout_constraintStart_toStartOf="@id/password_field"
-                app:layout_constraintTop_toBottomOf="@+id/password_field"/>
+                app:layout_constraintTop_toBottomOf="@+id/password_field" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_btn"
@@ -109,6 +102,34 @@
                 android:textAllCaps="false"
                 app:layout_constraintStart_toStartOf="@id/forgot_msg"
                 app:layout_constraintTop_toBottomOf="@+id/forgot_msg" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_btn"
+                style="@style/btn"
+                android:contentDescription="@string/login_btn"
+                android:text="@string/register_btn"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toBottomOf="@+id/login_btn"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/or_msg"
+                style="@style/read_msg"
+                android:clickable="true"
+                android:gravity="left"
+                android:text="Or, login with"
+                app:layout_constraintStart_toStartOf="@id/register_btn"
+                app:layout_constraintTop_toBottomOf="@+id/register_btn" />
+
+            <TextView
+                android:id="@+id/social_media_msg"
+                style="@style/click_msg"
+                android:clickable="true"
+                android:gravity="left"
+                android:text="Social Media"
+                android:layout_marginStart="110dp"
+                app:layout_constraintStart_toStartOf="@id/register_btn"
+                app:layout_constraintTop_toBottomOf="@+id/register_btn" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
