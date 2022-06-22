@@ -62,44 +62,37 @@ class AuthActivity : AppCompatActivity() {
             }
         }
 
-        views.registerBtn.setOnClickListener {
-<<<<<<< HEAD
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(views.user.text.toString(), views.password.text.toString()).addOnCompleteListener {
-=======
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(
-                views.user.text.toString(),
-                views.password.text.toString()
-            ).addOnCompleteListener {
->>>>>>> 979aa7880a5f7d53edfeb3ffe3c5cbdb56993f96
-                if (it.isSuccessful) {
-                    if (views.password.text.toString().equals(views.password.text.toString())) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
-                    } else {
-                        Toast.makeText(this, "Error, password does not match", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-
-                } else {
-                    Toast.makeText(this, "Error, user already exists", Toast.LENGTH_SHORT).show()
-                }
-            }
+        views.socialOpt.setOnClickListener {
+            showOptions()
         }
 
-<<<<<<< HEAD
+        views.registerMsg.setOnClickListener {
+            showRegister()
+        }
 
-=======
->>>>>>> 979aa7880a5f7d53edfeb3ffe3c5cbdb56993f96
 
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
+    private fun showOptions() {
+        val intent:Intent = Intent(this, Options::class.java)
+        startActivity(intent)
+    }
 
+    private fun showRegister() {
+        val intent: Intent = Intent(this, Register::class.java)
+        startActivity(intent)
+    }
+
+    private fun showHome(email: String, provider: ProviderType) {
         val intent: Intent = Intent(this, MainActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
         startActivity(intent)
     }
-
-
 }
+
+
+
+
+

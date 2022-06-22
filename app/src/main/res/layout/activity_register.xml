@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
+                android:src="@drawable/logo" />
 
             <TextView
                 android:id="@+id/msg_view"
@@ -108,20 +108,21 @@
             <TextView
                 android:id="@+id/or_msg"
                 style="@style/read_msg"
-                android:layout_marginEnd="110dp"
+                android:layout_marginEnd="65dp"
                 android:clickable="true"
                 android:gravity="right"
-                android:text="@string/signup_whit"
+                android:text="@string/already_msg"
                 app:layout_constraintStart_toStartOf="@id/signup_btn"
-                app:layout_constraintTop_toBottomOf="@+id/signup_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/signup_btn"
+                app:layout_constraintRight_toLeftOf="@id/login_msg"/>
 
             <TextView
-                android:id="@+id/social_media_msg"
+                android:id="@+id/login_msg"
                 style="@style/click_msg"
-                android:clickable="true"
                 android:gravity="right"
-                android:text="@string/social_media"
-                app:layout_constraintStart_toStartOf="@id/signup_btn"
+                android:text="@string/msg_login"
+                app:layout_constraintLeft_toRightOf="@id/or_msg"
+                app:layout_constraintRight_toRightOf="@id/signup_btn"
                 app:layout_constraintTop_toBottomOf="@+id/signup_btn" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
