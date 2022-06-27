@@ -24,6 +24,7 @@ class Options : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(views.root)
         setup()
+
     }
 
     private fun setup() {
@@ -74,9 +75,13 @@ class Options : AppCompatActivity() {
     }
 
     private fun showHome(email: String, provider: ProviderType) {
-        val intent: Intent = Intent(this, MainActivity::class.java)
+        val intent: Intent = Intent(this, MainActivity::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider.name)
+        }
         startActivity(intent)
     }
+
 
 }
 
