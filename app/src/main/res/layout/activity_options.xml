@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Options">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_menu_24"
+        app:title="@string/app_name" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -17,22 +25,21 @@
             <ImageView
                 android:id="@+id/uide_logo"
                 android:layout_width="match_parent"
-                android:layout_marginTop="40dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/logo"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/options_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign In Options"
                 android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Sign In Options"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_msg"
-                android:gravity="center"
-                app:layout_constraintTop_toBottomOf="@id/uide_logo"
-                />
+                app:layout_constraintTop_toBottomOf="@id/uide_logo" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/google_btn"
@@ -40,18 +47,24 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                app:layout_constraintTop_toBottomOf="@id/options_text"
                 android:text="Google"
                 android:textAllCaps="false"
                 app:icon="@drawable/google_icon"
                 app:iconGravity="textStart"
-                tools:ignore="MissingConstraints"
                 app:layout_constraintLeft_toLeftOf="@id/options_text"
-                app:layout_constraintRight_toRightOf="@id/options_text"/>
+                app:layout_constraintRight_toRightOf="@id/options_text"
+                app:layout_constraintTop_toBottomOf="@id/options_text"
+                tools:ignore="MissingConstraints" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bajo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
