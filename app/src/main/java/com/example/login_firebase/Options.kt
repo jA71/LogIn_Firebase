@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
 
+
 class Options : AppCompatActivity() {
 
     private lateinit var views: ActivityOptionsBinding
@@ -41,8 +42,10 @@ class Options : AppCompatActivity() {
     }
 
 
-    override fun onActivityReenter(resultCode: Int, data: Intent?) {
-        super.onActivityReenter(resultCode, data)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+
 
         if (resultCode == GOOGLE_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
@@ -72,6 +75,7 @@ class Options : AppCompatActivity() {
             }
 
         }
+        super.onActivityReenter(resultCode, data)
     }
 
     private fun showHome(email: String, provider: ProviderType) {
