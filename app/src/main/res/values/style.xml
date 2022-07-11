@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="margins">
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- DESIGN FOR INPUTS -->
+    <style name="inputs" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="android:paddingTop">@dimen/input_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- DESING FOR MSG -->
+    <style name="msg" parent="inputs">
+        <item name="android:gravity">left</item>
+    </style>
+
+    <!-- DESING FOR FRAGMENT -->
+
+    <style name="fragments">
+        <item name="android:layout_marginLeft">@dimen/margin_frag</item>
+        <item name="android:layout_marginTop">@dimen/margin_frag</item>
+        <item name="android:layout_marginRight">@dimen/margin_frag</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!-- DESING FOR BTN -->
+
+    <style name="btn" parent="margins">
+        <item name="cornerRadius">@dimen/btn_radius_cornes</item>
+    </style>
+
+
+    <!-- DESIGN FOR CLICKABLE MSG -->
+
+    <style name="click_msg" parent="margins">
+        <item name="android:textColor">@color/steel_blue</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_click_txt</item>
+    </style>
+
+
+    <!-- DESIGN FOR MSG -->
+
+    <style name="read_msg" parent="margins">
+        <item name="android:layout_marginTop">@dimen/margin_top_click_txt</item>
+    </style>
+
+
+    <!-- DESIGN FOR TEXT VIEW -->
+
+    <style name="text" parent="margins">
+
+        <item name="android:background">@color/red_uide</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size_show</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+    </style>
+
+    <style name="view_text" parent="margins">
+        <item name="android:textSize">@dimen/text_size_data</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_data</item>
+    </style>
+
+    <!--splash screen-->
+    <style name="splashTheme" parent="Theme.LogIn_Firebase">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+
+</resources>

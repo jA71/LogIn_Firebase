@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">LogIn_Firebase</string>
+
+    <!-- MSG -->
+    <string name="msg_login">Log In</string>
+    <string name="register">Sign Up</string>
+    <string name="new_user">Are you new?</string>
+    <string name="login_whit">Or, login with</string>
+    <string name="signup_whit">Or, signup with</string>
+    <string name="social_media">Social Media</string>
+    <string name="welcome_msg">Welcome</string>
+    <string name="already_msg">Already exist ?</string>
+
+
+    <!-- FLIEDS -->
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+
+    <!-- BTNS -->
+    <string name="login_btn">Login</string>
+    <string name="logout_btn">Logout</string>
+    <string name="register_btn">Register</string>
+
+
+    <string name="prefs_file">preferencias</string>
+    <string name="default_web_id_token">165602814967-smk14bfoodpjt9ifo94kie1lgupd0qcm.apps.googleusercontent.com</string>
+
+
+
+</resources>

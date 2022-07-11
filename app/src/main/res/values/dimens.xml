@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- IMG -->
+
+    <dimen name="margin_top_logo">200dp</dimen>
+
+
+    <!-- INPUTS -->
+
+    <dimen name="margin_end">24dp</dimen>
+    <dimen name="margin_start">24dp</dimen>
+    <dimen name="input_padding">15dp</dimen>
+    <dimen name="margin_bottom">25dp</dimen>
+    <dimen name="margin_top_user">450dp</dimen>
+    <dimen name="margin_top_password">525dp</dimen>
+
+
+    <!-- TEXTS -->
+
+    <dimen name="margin_top_msg">330dp</dimen>
+    <dimen name="text_size_msg">30dp</dimen>
+    <dimen name="text_size">18dp</dimen>
+    <dimen name="margin_top_click_txt">5dp</dimen>
+    <dimen name="margin_end_read_txt">80dp</dimen>
+    <dimen name="text_size_show">20dp</dimen>
+    <dimen name="margin_top">15dp</dimen>
+    <dimen name="text_size_data">16dp</dimen>
+    <dimen name="margin_top_data">5dp</dimen>
+
+
+    <!-- BTN -->
+
+    <dimen name="size_for_btn">20dp</dimen>
+    <dimen name="btn_radius_cornes">10dp</dimen>
+    <dimen name="margin_start_btn">32dp</dimen>
+    <dimen name="margin_end_btn">220dp</dimen>
+    <dimen name="margin_top_btn">100dp</dimen>
+    <dimen name="long_btn">130dp</dimen>
+    <dimen name="top_to_bottom_btn">650dp</dimen>
+
+    <!-- FRAGMENT -->
+    <dimen name="margin_frag">10dp</dimen>
+
+
+</resources>
