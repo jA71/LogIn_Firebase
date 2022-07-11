@@ -13,7 +13,7 @@
 
 
     <!-- FLIEDS -->
-    <string name="provider">Provider</string>
+    <string name="name">Name</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>

@@ -3,10 +3,12 @@ package com.example.login_firebase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.login_firebase.databinding.ActivityOptionsBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
@@ -18,72 +20,52 @@ class Options : AppCompatActivity() {
 
     private lateinit var views: ActivityOptionsBinding
 
-    private val GOOGLE_SIGN_IN = 100
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         views = ActivityOptionsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(views.root)
-        setup()
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
 
-    }
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-    private fun setup() {
-        views.googleBtn.setOnClickListener {
-            val googleConf = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_id_token)).requestEmail().build()
-
-            val googleClient = GoogleSignIn.getClient(this, googleConf)
-            googleClient.signOut()
-
-            startActivity(googleClient.signInIntent)
-
+        views.googleBtn.setOnClickListener{
+            signIn()
         }
+
     }
 
-
+    // [START onactivityresult]
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-
-
-        if (resultCode == GOOGLE_SIGN_IN) {
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == 9001) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-
             try {
-
-                val account = task.getResult(ApiException::class.java)
-
-                if (account != null) {
-
-                    val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-
-                    FirebaseAuth.getInstance().signInWithCredential(credential)
-                        .addOnCompleteListener {
-                            if (it.isSuccessful) {
-                                showHome(account.email ?: "", ProviderType.GOOGLE)
-
-                            } else {
-                                Toast.makeText(this, "Error al ingresar 1", Toast.LENGTH_SHORT)
-                                    .show()
-                            }
-                        }
+                // Google Sign In was successful, authenticate with Firebase
+                val account = task.getResult(ApiException::class.java)!!
+                Log.d("succes", "datos:" + account.displayName +" "+ account.email +" "+ account.photoUrl)
+                val intent = Intent(this, MainActivity::class.java).apply {
+                    putExtra("full_name", account.displayName)
+                    putExtra("email", account.email)
+                    putExtra("photoUrl", account.photoUrl.toString())
                 }
-
+                this.startActivity(intent)
             } catch (e: ApiException) {
-                Toast.makeText(this, "Error al ingresar 2", Toast.LENGTH_SHORT).show()
+                // Google Sign In failed, update UI appropriately
+                Log.w("error", "Google sign in failed", e)
             }
-
         }
-        super.onActivityReenter(resultCode, data)
     }
-
-    private fun showHome(email: String, provider: ProviderType) {
-        val intent: Intent = Intent(this, MainActivity::class.java).apply {
-            putExtra("email", email)
-            putExtra("provider", provider.name)
-        }
-        startActivity(intent)
+    // [START signin]
+    private fun signIn() {
+        val signInIntent = googleSignInClient.signInIntent
+        startActivityForResult(signInIntent, 9001)
     }
 
 
