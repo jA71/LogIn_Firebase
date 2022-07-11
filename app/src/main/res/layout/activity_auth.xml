@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_menu_24"
         app:title="@string/app_name"
-        app:menu="@menu/principal"
+        app:menu="@menu/principal_auth"
         tools:ignore="InvalidId" />
 
     <ScrollView

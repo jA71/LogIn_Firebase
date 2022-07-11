@@ -46,27 +46,19 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.principal, menu)
-        val menuItem = menu?.findItem(R.id.buscar)
-        hacerBuscar(menuItem)
+        inflater.inflate(R.menu.principal_auth, menu)
+        views.principal.setOnMenuItemClickListener { item ->
+            when (item.itemId){
+                R.id.preferencias_auth -> {
+                    Toast.makeText(this@AuthActivity, "Aqui van las preferencias", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
         return super.onCreateOptionsMenu(menu)
     }
 
-    private fun hacerBuscar(menuItem: MenuItem?) {
-        val buscarAlgo = menuItem?.actionView as SearchView
-        buscarAlgo.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                Toast.makeText(this@AuthActivity, "typing... " + query, Toast.LENGTH_SHORT).show()
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                Toast.makeText(this@AuthActivity, "mandando a buscar... " + newText, Toast.LENGTH_SHORT).show()
-                return false
-            }
-        })
-
-    }
 
     override fun onStart() {
         super.onStart()
