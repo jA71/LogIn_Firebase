@@ -36,7 +36,23 @@ class Options : AppCompatActivity() {
         views.googleBtn.setOnClickListener{
             signIn()
         }
+        accionesMenuBajo()
 
+    }
+
+    private fun accionesMenuBajo() {
+        views.navigation.setOnItemSelectedListener { itemBajo ->
+            when (itemBajo.itemId){
+                R.id.home -> {
+                    val intent = Intent(this@Options, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 
     // [START onactivityresult]

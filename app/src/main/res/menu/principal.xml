@@ -7,24 +7,20 @@
         android:id="@+id/buscar"
         android:icon="@drawable/ic_baseline_search_24"
         android:iconTint="@color/white"
-        android:title="buscar"
+        android:title="Buscar"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/compartir"
-        android:icon="@drawable/ic_baseline_share_24"
+        android:id="@+id/ajustes"
+        android:icon="@drawable/ic_baseline_settings_24"
         android:iconTint="@color/white"
-        android:title="compartir"
+        android:title="Ajustes"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/ajustes"
-        android:title="ajustes" />
-
-    <item
-        android:id="@+id/ejemplo"
-        android:title="ejemplo" />
+        android:id="@+id/preferencias"
+        android:title="Preferencias" />
 
 
 </menu>

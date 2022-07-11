@@ -19,6 +19,28 @@ class Register : AppCompatActivity() {
         setContentView(views.root)
         setup()
         session()
+        accionesMenuBajo()
+    }
+
+    private fun accionesMenuBajo() {
+        views.navigation.setOnItemSelectedListener { itemBajo ->
+            when (itemBajo.itemId) {
+                R.id.home -> {
+                    val intent = Intent(this@Register, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                R.id.opciones -> {
+                    val intent = Intent(this@Register, Options::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                else -> false
+
+            }
+        }
     }
 
     private fun session() {
