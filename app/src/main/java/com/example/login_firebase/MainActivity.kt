@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             prefs.apply()
 
             FirebaseAuth.getInstance().signOut()
-            onBackPressed()
+            onBackPressed()//finishactivity
         }
 
 
