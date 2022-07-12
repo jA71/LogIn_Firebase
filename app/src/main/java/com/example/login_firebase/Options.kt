@@ -93,7 +93,7 @@ class Options : AppCompatActivity() {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 val account = task.getResult(ApiException::class.java)!!
-                Log.d("succes", "datos:" + account.displayName +" "+ account.email +" "+ account.photoUrl)
+                Log.d("succes", "datos:" + account.displayName +" "+ account.email +" "+ account.photoUrl+" "+account.idToken)
                 val intent = Intent(this, MainActivity::class.java).apply {
                     putExtra("full_name", account.displayName)
                     putExtra("email", account.email)
